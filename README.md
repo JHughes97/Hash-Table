@@ -1,2 +1,2 @@
 # Hash-Table
-Inserts words from dictionary into a hash table and allows search and deletion (Python3)
+Inserts words from dictionary into a hash table and allows searching and printing (Python3)
