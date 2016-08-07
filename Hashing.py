@@ -103,19 +103,3 @@ class HashTable:
 		print("Table Size = {}".format(self.size))
 		print("Number of Words = {}".format(self.items))
 		print("Total Collisions = {}".format(self.collisions))
-
-	#method which deletes specified items
-	def delete(self,input):
-		index = self.getHashKey(input)				#get initial index
-		jump = self.getDoubleHashKey(input)			#get jump amount
-
-		while self.table[index] != None and self.table[index] != input:		#loop while slot not empty and item not found
-			index += jump
-			index = index%self.size
-
-		#print whether deletion was successful
-		if self.table[index] is None:
-			print("Word is not in the table")
-		else:
-			self.table[index] = None
-			print("Word deleted from table")
