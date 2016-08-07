@@ -1,7 +1,6 @@
 """	Reads in dictionary and inserts words into Hash Table
 	and prints total number of collisions
-	User can print table, search for specified words, and
-	delete specified words
+	User can print table or search for specified words
 """
 
 #import hashtable class and switch class
@@ -21,13 +20,12 @@ print("Number of collisions = {}\n\n".format(cols))
 
 #loop until user decides to exit
 while True:
-	x = int(input("\n1) Print all words\n2) Search for a word\n3) Delete a word\n4) Quit\n"))
+	x = int(input("\n1) Print all words\n2) Search for a word\n3) Quit\n"))
 
 	#If user presses...
 	#1..Print all words in table and print collisions of each word
 	#2..Ask user to enter a word and search for that word
-	#3..Ask user to enter a word and delete that word
-	#4..Exit loop
+	#3..Exit loop
 	stop = False
 	for case in switch(x):
 		if case(1):
@@ -38,10 +36,6 @@ while True:
 			table.getSlot(word)
 			break
 		if case(3):
-			word = input("\nEnter word to be deleted:")
-			table.delete(word)
-			break
-		if case(4):
 			stop = True
 			break
 		if case():
